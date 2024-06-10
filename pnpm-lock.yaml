@@ -23,6 +23,9 @@ dependencies:
   bcrypt:
     specifier: ^5.1.1
     version: 5.1.1
+  dotenv:
+    specifier: ^16.4.5
+    version: 16.4.5
   pg:
     specifier: ^8.12.0
     version: 8.12.0
