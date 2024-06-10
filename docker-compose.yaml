@@ -3,11 +3,11 @@ version: '3.8'
 services:
   postgres:
     image: postgres:latest
-    container_name: vendas-online-backend-db
+    container_name: vendas-online-db-container
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_DB: vendas-online-backend
+      POSTGRES_DB: vendas-online
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 26032020Red#
+      POSTGRES_PASSWORD: 12345678
      
