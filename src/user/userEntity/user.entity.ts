@@ -1,9 +1,10 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { AddressEntity } from 'src/address/addressEntity/address.entity';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({ name: 'users' })
+@Entity({ name: 'user' })
 export class UserEntity {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Column({ name: 'name', nullable: false })
   name: string;
@@ -19,4 +20,7 @@ export class UserEntity {
 
   @Column({ name: 'cpf', nullable: false })
   cpf: string;
+
+  @OneToMany(() => AddressEntity, (address) => address.user)
+  addresses: AddressEntity[];
 }
